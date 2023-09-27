@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bota's Clock</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style\styleClockPage.css" />
+    </head>
+
+    <body>
+        <p id="bota">
+            <a href="https://www.botafogo.com.br"
+                >Botafogo de Futebol e Regatas</a
+            >
+            <sub style="font-size: small">
+                <a href="/cg/downloads/PDFs/04_LCG_Window-Viewport.pdf">[1]</a>
+                <a href="/python/laboratorios2.html#8c">[2]</a>
+                <a
+                    href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+                >
+                    [3]
+                </a>
+            </sub>
+        </p>
+
+        <div id="container">
+            <canvas id="clock" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+            <canvas id="handles" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+        </div>
+        
+        <br />
+        <p>
+            <audio title="Hino do Botafogo" controls loop>
+                <source src="assets\hino-do-botafogo.mp3" type="audio/mpeg" />
+                Please upgrade your browser!
+            </audio>
+
+            <small>
+                Hino do Botafogo por
+                <a
+                    href="https://vejario.abril.com.br/cidade/curiosidades-hinos-times-cariocas/"
+                >
+                    Lamartine Babo (1949).
+                </a>
+            </small>
+        </p>
+
+        <p>
+            <iframe
+                title="Golaço de Falta de Garrincha pela Seleção"
+                width="320"
+                height="240"
+                src="https://www.youtube.com/embed?v=0hXy2A5M-fY"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            >
+            </iframe>
+            <br />
+
+            <small id="Garrincha">
+                Golaço de Falta de Garrincha pela Seleção
+                <a href="https://www.youtube.com/watch?v=0hXy2A5M-fY">
+                    12/07/1966
+                </a>
+            </small>
+            <br />
+
+            <small id="Tiquinho">
+                Gol de Tiquinho contra o Palmeiras
+                <a href="https://www.youtube.com/watch?v=l4xFyCCeKEQ">
+                    25/06/2023
+                </a>
+            </small>
+        </p>
+
+        <script src="JavaScript\suncalc.js"></script>
+        <script src="JavaScript\clock.js"></script>
+
+        <script>
+            var date = new Date();
+            var past66 = new Date(1966, 7, 12);
+            var past23 = new Date(2023, 2, 12);
+            var years66 = date.getFullYear() - past66.getFullYear();
+            var years23 = date.getFullYear() - past23.getFullYear();
+            document.getElementById(
+                "Garrincha"
+            ).innerHTML += ` (há ${years66} anos atrás)`;
+            document.getElementById(
+                "Tiquinho"
+            ).innerHTML += ` (há ${years23} anos atrás)`;
+        </script>
+
+    </body>
+</html>

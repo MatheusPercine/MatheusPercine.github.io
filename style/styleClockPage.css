@@ -1,0 +1,46 @@
+:root {
+    --cgrena: #8b2439;
+    --cgreen: #446127;
+    --corange: orange;
+    --cwhite: white;
+    --cwhite1: #8b2439;
+    --cwhite2: #446127;
+    --cwhite3: #446127;
+}
+
+body {
+    margin: 20px;
+}
+
+canvas {
+    position: absolute;
+}
+
+#clock,
+#handles {
+    border: 5px solid #0f0f0f;
+    padding: 20px;
+    margin: 0px;
+}
+
+#handles {
+    z-index: 2;
+}
+
+#clock {
+    background-color: rgb(243, 242, 240);
+    z-index: 1;
+}
+
+#bota {
+    width: 512px;
+    font-family: cursive;
+    text-align: center;
+    font-size: 30px;
+}
+#container {
+    position: relative;
+    height: 512px;
+    margin: 0px;
+    margin-bottom: 50px;
+}
